@@ -24,7 +24,7 @@
 <script src="js/home.js?v={{ globals.v1 }}"></script>
 <script src="js/sharex.js?v={{ globals.v1 }}"></script>
 <!-- We assign an ID for this so that the script can find out version string for render images -->
-<script id="renderScript" data-version="{{ globals.v4 }}" src="js/render.js?v={{ globals.v1 }}"></script>
+<!--<script id="renderScript" data-version="{{ globals.v4 }}" src="js/render.js?v={{ globals.v1 }}"></script>-->
 {% endblock %}
 
 {% block content %}
@@ -138,7 +138,7 @@
       <div class="git-commit columns is-gapless">
         <div class="column is-hidden-mobile"></div>
         <div class="column">
-          <span>Git commit: </span><a href="https://github.com/BobbyWibowo/lolisafe/commit/{{ gitHash }}" target="_blank" rel="noopener">{{ gitHash }}</a>
+        <span>Git commit: </span><a href="https://github.com/getraid/GetSafe/commit/{{ gitHash }}" target="_blank" rel="noopener">{{ gitHash }}</a>
         </div>
         <div class="column is-hidden-mobile"></div>
       </div>
@@ -147,5 +147,5 @@
   </div>
 </section>
 
-{% include "_partial/noscript.njk" %}
+  {% include "_partial/noscript.njk" %}
 {% endblock %}

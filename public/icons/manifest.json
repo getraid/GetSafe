@@ -1,7 +1,7 @@
 {
-  "name": "safe.fiery.me",
-  "short_name": "fiery.me",
-  "description": "A pomf-like file uploading service that doesn't suck.",
+  "name": "getra.id",
+  "short_name": "getra.id",
+  "description": "A private puush-like file uploading service that doesn't suck.",
   "background_color": "#232629",
   "theme_color": "#232629",
   "display": "standalone",

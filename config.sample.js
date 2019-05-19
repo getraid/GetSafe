@@ -89,7 +89,7 @@ module.exports = {
   /*
     Show hash of the current git commit in homepage.
   */
-  showGitHash: false,
+  showGitHash: true,
 
   /*
     Path to error pages. Only 404 and 500 will be used.
