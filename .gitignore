@@ -1,8 +1,10 @@
 .DS_Store
+.nvmrc
+.vscode
 !.gitkeep
-node_modules/
-uploads/
-logs/
+node_modules
+uploads
+logs
 database/db
 config.js
 start.json
@@ -10,5 +12,7 @@ npm-debug.log
 pages/custom/**
 migrate.js
 yarn.lock
+yarn-error.log
 package-lock.json
-.vscode/
+public/render/**/original
+public/render/**/wip

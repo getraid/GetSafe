@@ -1,0 +1,11 @@
+[Unit]
+Description=GetSafe Node
+After=network-online.target
+
+[Service]
+Restart=on-failure
+WorkingDirectory=/home/tk/GetSafe/
+ExecStart=/usr/bin/node /home/tk/GetSafe/getsafe.js
+
+[Install]
+WantedBy=multi-user.target
