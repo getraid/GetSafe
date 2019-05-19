@@ -10,7 +10,7 @@ module.exports = {
   /*
     If true, users will be able to create accounts and access their uploaded files.
   */
-  enableUserAccounts: true,
+  enableUserAccounts: false,
 
   /*
     Here you can decide if you want lolisafe to serve the files or if you prefer doing so via nginx.
@@ -25,8 +25,8 @@ module.exports = {
     Both cases require you to type the domain where the files will be served on the `domain` key below.
     Which one you use is ultimately up to you.
   */
-  serveFilesWithNode: false,
-  domain: 'https://lolisafe.moe',
+  serveFilesWithNode: true,
+  domain: 'https://getra.id',
 
   /*
     If you are serving your files with a different domain than your lolisafe homepage,
@@ -60,7 +60,6 @@ module.exports = {
     '.cmd',
     '.com',
     '.csh',
-    '.exe',
     '.exec',
     '.jar',
     '.msi',
@@ -69,7 +68,10 @@ module.exports = {
     '.ps1',
     '.psm1',
     '.scr',
-    '.sh'
+    '.sh',
+    '.htm',
+    '.html',
+    '.php'
   ],
 
   /*
@@ -103,7 +105,7 @@ module.exports = {
     Trust proxy.
     Only enable if you are running this behind a proxy like Cloudflare, Incapsula, etc.
   */
-  trustProxy: true,
+  trustProxy: false,
 
   /*
     Uploads config.
@@ -120,7 +122,7 @@ module.exports = {
       you must set client_max_body_size to the same as maxSize.
       https://nginx.org/en/docs/http/ngx_http_core_module.html#client_max_body_size
     */
-    maxSize: '512MB',
+    maxSize: '4096MB',
 
     /*
       Max file size allowed for upload by URLs. Needs to be in MB.
@@ -170,13 +172,13 @@ module.exports = {
     /*
       Scan files using ClamAV through clamd.
     */
-    scan: {
+   /* scan: {
       enabled: false,
       ip: '127.0.0.1',
       port: 3310,
       timeout: 180 * 1000,
       chunkSize: 64 * 1024
-    },
+    },/*
 
     /*
       Chunk size for chunk uploads. Needs to be in MB.
