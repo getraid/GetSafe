@@ -1,12 +1,10 @@
-# GetSafe - A fork of [WeebDev/lolisafe](https://github.com/WeebDev/lolisafe)
+# GetSafe - A fork of [BobbyWibowo/lolisafe](https://github.com/BobbyWibowo/lolisafe) of a fork of [WeebDev/lolisafe](https://github.com/WeebDev/lolisafe)
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/WeebDev/lolisafe/master/LICENSE)
 
-## `GetSafe` branch
-
 [![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
-This branch is the one being used at [https://safe.fiery.me](https://safe.fiery.me). If you are looking for the original, head to `master` branch, or even better to [WeebDev/lolisafe](https://github.com/WeebDev/lolisafe).
+This branch is the one being used at [https://getra.id/](https://getra.id/). If you are looking for the original, head to [WeebDev/lolisafe](https://github.com/WeebDev/lolisafe).
 
 If you want to use an existing lolisafe database with this branch, make sure to run `node database/migration.js` at least once to create some new columns introduced in this branch.
 
@@ -67,17 +65,21 @@ If you set it to `false`, you need to set nginx to directly serve whatever folde
 downloads in. This also gives you the ability to serve them, for example, like this:
 `https://files.lolisafe.moe/yourFile.jpg`
 
-Both cases require you to type the domain where the files will be served on the `domain` key below.
-Which one you use is ultimately up to you. Either way, I've provided a sample config files for nginx that you can use to set it up quickly and painlessly!
+# Caddy Webserver
 
-- [Normal Version](https://github.com/WeebDev/lolisafe/blob/master/nginx.sample.conf)
-- [SSL Version](https://github.com/WeebDev/lolisafe/blob/master/nginx-ssl.sample.conf)
+In this fork I want to introduce the [Caddy webserver] (https://caddyserver.com/) instead of the classic nginx or apache setup. If you wish to stick to the old concept, just visit the [original repository] (https://github.com/WeebDev/lolisafe)
+Both cases require you to type the domain where the files will be served on the `domain` key below.
+
+> Needs to be written.
+
 
 If you set `enableUserAccounts: true`, people will be able to create accounts on the service to keep track of their uploaded files and create albums to upload stuff to, pretty much like imgur does, but only through the API. Every user account has a token that the user can use to upload stuff through the API. You can find this token on the section called `Change your token` on the administration dashboard, and if it gets leaked or compromised you can renew it by clicking the button titled `Request new token`.
 
 ## Cloudflare Support
 
 If you are running lolisafe behind Cloudflare there is support to make the NGINX logs have the users IP instead of Cloudflares IP. You will need to compile NGINX from source with `--with-http_realip_module` as well as uncomment the following line in the NGINX config: `include /path/to/lolisafe/real-ip-from-cf;`
+
+## Setup GetSafe as a Service
 
 ## Using lolisafe
 
