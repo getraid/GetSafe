@@ -81,6 +81,9 @@ If you are running lolisafe behind Cloudflare there is support to make the NGINX
 
 ## Setup GetSafe as a Service
 
+go into to installAsService folder, edit the user,usergroup, workingdir and the ExecStart-Lines
+run sudo chmod +x install.sh and run install.sh
+
 ## Using lolisafe
 
 Once the service starts you can start hitting the upload endpoint at `/api/upload` with any file. If you're using the frontend to do so then you are pretty much set, but if using the API to upload make sure the form name is set to `files[]` and the form type to `multipart/form-data`. If the service is running in private mode, dont forget to send a header of type `token: YOUR-CLIENT-TOKEN` to validate the request.
