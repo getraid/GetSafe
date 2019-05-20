@@ -27,14 +27,14 @@
             Files uploaded through this No-JS uploader will not be associated to your account, if you have any.
           </p>
           {% if renderOptions.uploadDisabled -%}
-          <a class="button is-danger" style="display: flex" href="auth">{{ renderOptions.uploadDisabled }}</a>
+          <a class="button is-warning" style="display: flex" href="auth">{{ renderOptions.uploadDisabled }}</a>
           {%- else -%}
           <form id="form" class="field" action="" method="post" enctype="multipart/form-data">
             <div class="field">
               <input type="file" name="files[]" multiple="multiple" style="width: 100%">
             </div>
             <div class="field">
-              <input type="submit" class="button is-danger" value="Upload" style="width: 100%">
+              <input type="submit" class="button is-warning" value="Upload" style="width: 100%">
             </div>
           </form>
           {%- endif %}

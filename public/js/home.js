@@ -179,7 +179,7 @@ page.prepareDropzone = function () {
   const div = document.createElement('div')
   div.className = 'control is-expanded'
   div.innerHTML = `
-    <div id="dropzone" class="button is-danger is-fullwidth is-unselectable">
+    <div id="dropzone" class="button is-primary is-fullwidth is-unselectable">
       <span class="icon">
         <i class="icon-upload-cloud"></i>
       </span>

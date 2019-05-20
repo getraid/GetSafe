@@ -198,29 +198,8 @@ const start = async () => {
   }
 
   safe.listen(config.port, async () => {
-    console.log(`lolisafe started on port ${config.port}`)
+    console.log(`getsafe started on port ${config.port}`)
 
-    // safe.fiery.me-exclusive cache control
-    if (config.cacheControl) {
-      process.stdout.write('Cache control enabled. Purging Cloudflare\'s cache ...')
-      const routes = config.pages.concat(['api/check'])
-      const results = await utils.purgeCloudflareCache(routes)
-      let errored = false
-      let succeeded = 0
-      for (const result of results) {
-        if (result.errors.length) {
-          if (!errored) {
-            errored = true
-            process.stdout.write(' ERROR!\n')
-          }
-          result.errors.forEach(error => console.log(`CF: ${error}`))
-          continue
-        }
-        succeeded += result.files.length
-      }
-      if (!errored)
-        process.stdout.write(` ${succeeded} OK!\n`)
-    }
 
     // NODE_ENV=development yarn start
     if (process.env.NODE_ENV === 'development') {
