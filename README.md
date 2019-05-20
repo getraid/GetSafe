@@ -1,4 +1,4 @@
-# GetSafe - A fork of [BobbyWibowo/lolisafe](https://github.com/BobbyWibowo/lolisafe) of a fork of [WeebDev/lolisafe](https://github.com/WeebDev/lolisafe)
+# GetSafe - A fork of [lolisafe](https://github.com/BobbyWibowo/lolisafe)
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/WeebDev/lolisafe/master/LICENSE)
 
@@ -65,15 +65,23 @@ If you set it to `false`, you need to set nginx to directly serve whatever folde
 downloads in. This also gives you the ability to serve them, for example, like this:
 `https://files.lolisafe.moe/yourFile.jpg`
 
+If you set `enableUserAccounts: true`, people will be able to create accounts on the service to keep track of their uploaded files and create albums to upload stuff to, pretty much like imgur does, but only through the API. Every user account has a token that the user can use to upload stuff through the API. You can find this token on the section called `Change your token` on the administration dashboard, and if it gets leaked or compromised you can renew it by clicking the button titled `Request new token`.
+
 # Caddy Webserver
 
-In this fork I want to introduce the [Caddy webserver] (https://caddyserver.com/) instead of the classic nginx or apache setup. If you wish to stick to the old concept, just visit the [original repository] (https://github.com/WeebDev/lolisafe)
-Both cases require you to type the domain where the files will be served on the `domain` key below.
+In this fork I want to introduce the [Caddy webserver](https://caddyserver.com/) instead of the classic nginx or apache setup. If you wish to stick to the old concept, just visit the [original repository](https://github.com/WeebDev/lolisafe)
 
-> Needs to be written.
-
-
-If you set `enableUserAccounts: true`, people will be able to create accounts on the service to keep track of their uploaded files and create albums to upload stuff to, pretty much like imgur does, but only through the API. Every user account has a token that the user can use to upload stuff through the API. You can find this token on the section called `Change your token` on the administration dashboard, and if it gets leaked or compromised you can renew it by clicking the button titled `Request new token`.
+> ## Needs to be written.
+short version:
+install ufw,
+block port 9999 (if you use that port), 
+make a Caddyfile with something like this
+```
+example.com {
+       proxy / localhost:9999
+ }
+```
+which will redirect anything via https automaticly to the nodeserver running locally
 
 ## Cloudflare Support
 
