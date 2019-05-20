@@ -1,5 +1,5 @@
 # GetSafe - A fork of [lolisafe](https://github.com/BobbyWibowo/lolisafe)
-
+![Image of getra.id](https://getra.id/host.png)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/WeebDev/lolisafe/master/LICENSE)
 
 [![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
@@ -89,8 +89,7 @@ If you are running lolisafe behind Cloudflare there is support to make the NGINX
 
 ## Setup GetSafe as a Service
 
-go into to installAsService folder, edit the user,usergroup, workingdir and the ExecStart-Lines
-run sudo chmod +x install.sh and run install.sh
+go into to installAsService folder with `cd installAsService`, edit the getsafe.service with `nano getsafe.service`. Edit the user you want to use the service with, the usergroup of this user, the workingdir and the ExecStart-Line. After that use `sudo chmod +x install.sh && install.sh`
 
 ## Using lolisafe
 
