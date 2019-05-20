@@ -203,7 +203,7 @@ module.exports = {
     fileLength: {
       min: 4,
       max: 32,
-      default: 32,
+      default: 5,
       userChangeable: false
     },
 
