@@ -18,6 +18,27 @@
   animation-timing-function: cubic-bezier(0, 0.71, 0.29, 1);
   -webkit-box-shadow: 0 20px 60px rgba(10, 10, 10, 0.05), 0 5px 10px rgba(10, 10, 10, 0.1), 0 1px 1px rgba(10, 10, 10, 0.2);
   box-shadow: 0 20px 60px rgba(10, 10, 10, 0.05), 0 5px 10px rgba(10, 10, 10, 0.1), 0 1px 1px rgba(10, 10, 10, 0.2);
+background: linear-gradient(43deg, #cb4b4b, #cb8c4b, #cbb94b, #aacb4b, #4bcb5d, #4bcba6, #4bc3cb, #4b79cb, #824bcb, #c04bcb, #cb4b9d, #cb4b81);
+background-size: 2400% 2400%;
+
+-webkit-animation: logo 30s ease infinite;
+-moz-animation: logo 30s ease infinite;
+animation: logo 30s ease infinite;
+}
+@-webkit-keyframes logo {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+@-moz-keyframes logo {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+@keyframes logo { 
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
 }
 
 #b img.logo {
